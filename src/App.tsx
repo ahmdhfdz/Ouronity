@@ -1,24 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import InputField from './components/InputField';
 
-function App() {
+
+// let anytype : any;
+
+// let name : string;
+// let age : number | string;
+// let isStudent : boolean;
+// let hobbies:string[];
+// let role:[number, string];
+
+// let printUndefined: (name:string) => void; //return undefined
+// let printNoReturn: (name:string) => never; //return no return
+
+// let unknownType : unknown;
+
+// function printName(name:string){
+//   console.log(name);
+// 
+// printName("Joko")
+
+// type Person = { //type = alias
+//   name: string;
+//   age?: number;
+// }
+
+// let person: Person = {
+//   name: 'Joko',
+// }
+
+// let lotsOfPeople: Person[];
+
+// type X = {
+//   a:string;
+//   b:number;
+// }
+
+// interface Person extends X{ //beda di dengan type penggunaan untuk inherit pakai extends kalau type pakai nama type lalu & (ex. X = Person & {...})
+//   name: string;
+//   age?: number;
+// }
+
+
+const App: React.FC = () => {
+
+  const [todo, setTodo] = useState<string>("")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <span className='heading'>Ouronity</span>
+      <InputField todo={todo} setTodo={setTodo}/>
     </div>
   );
 }
