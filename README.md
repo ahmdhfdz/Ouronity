@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# IMPORTANT for Starting Ouronity
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is for author practice only, don't expect to understand anything.
 
 ## Available Scripts
 
